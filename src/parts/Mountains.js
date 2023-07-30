@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
-const Mountains = () => ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "mountain mountain_1" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "mountain_1_rock_1" }), (0, jsx_runtime_1.jsx)("div", { className: "mountain_1_rock_2" })] })), (0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "mountain mountain_2" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "mountain_2_rock_1" }), (0, jsx_runtime_1.jsx)("div", { className: "mountain_2_rock_2" })] })), (0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "mountain mountain_3" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "mountain_3_rock_1" }), (0, jsx_runtime_1.jsx)("div", { className: "mountain_3_rock_2" })] }))] }));
-exports.default = Mountains;
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+const Mountains = () => (_jsxs(_Fragment, { children: [_jsxs("div", { className: "mountain mountain_1", children: [_jsx("div", { className: "mountain_1_rock_1" }), _jsx("div", { className: "mountain_1_rock_2" })] }), _jsxs("div", { className: "mountain mountain_2", children: [_jsx("div", { className: "mountain_2_rock_1" }), _jsx("div", { className: "mountain_2_rock_2" })] }), _jsxs("div", { className: "mountain mountain_3", children: [_jsx("div", { className: "mountain_3_rock_1" }), _jsx("div", { className: "mountain_3_rock_2" })] })] }));
+export default Mountains;

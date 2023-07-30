@@ -24,7 +24,7 @@ const Animation = () => (
             <Cloud 
               direction="right" 
               top={100}
-              delay={0} 
+              delay={5} 
               duration={150}
               rainOptions={{
                 duration: 16,
@@ -34,7 +34,7 @@ const Animation = () => (
              <Cloud 
               direction="left" 
               top={190}
-              delay={0} 
+              delay={15} 
               duration={180}
              />
             <Birds delay={5}/>

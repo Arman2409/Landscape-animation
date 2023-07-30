@@ -1,17 +1,12 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
-const framer_motion_1 = require("framer-motion");
-const Birds_1 = __importDefault(require("./parts/Birds"));
-const Sun_1 = __importDefault(require("./parts/Sun"));
-const Mountains_1 = __importDefault(require("./parts/Mountains"));
-const Pickup_1 = __importDefault(require("./parts/Cars/Pickup"));
-const SportCar_1 = __importDefault(require("./parts/Cars/SportCar"));
-const Cloud_1 = __importDefault(require("./parts/Cloud/Cloud"));
-const Animation = () => ((0, jsx_runtime_1.jsxs)(framer_motion_1.motion.div, Object.assign({ className: "main_cont", initial: {
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { motion } from "framer-motion";
+import Birds from "./parts/Birds";
+import Sun from "./parts/Sun";
+import Mountains from "./parts/Mountains";
+import Pickup from "./parts/Cars/Pickup";
+import SportCar from "./parts/Cars/SportCar";
+import Cloud from "./parts/Cloud/Cloud";
+const Animation = () => (_jsxs(motion.div, { className: "main_cont", initial: {
         backgroundColor: "rgba(0, 0, 0)"
     }, animate: {
         backgroundColor: "rgb(135, 206, 235)",
@@ -19,9 +14,9 @@ const Animation = () => ((0, jsx_runtime_1.jsxs)(framer_motion_1.motion.div, Obj
             duration: 6,
             delay: 1,
         }
-    } }, { children: [(0, jsx_runtime_1.jsx)(Sun_1.default, { duration: 4 }), (0, jsx_runtime_1.jsx)(Cloud_1.default, { direction: "right", top: 100, delay: 0, duration: 150, rainOptions: {
+    }, children: [_jsx(Sun, { duration: 4 }), _jsx(Cloud, { direction: "right", top: 100, delay: 5, duration: 150, rainOptions: {
                 duration: 16,
                 when: 300,
                 delay: 1
-            } }), (0, jsx_runtime_1.jsx)(Cloud_1.default, { direction: "left", top: 190, delay: 0, duration: 180 }), (0, jsx_runtime_1.jsx)(Birds_1.default, { delay: 5 }), (0, jsx_runtime_1.jsx)(Mountains_1.default, {}), (0, jsx_runtime_1.jsx)("div", Object.assign({ className: "land" }, { children: (0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "road" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "road_line" }), (0, jsx_runtime_1.jsx)(Pickup_1.default, { delay: 12 }), (0, jsx_runtime_1.jsx)(SportCar_1.default, { delay: 15 })] })) }))] })));
-exports.default = Animation;
+            } }), _jsx(Cloud, { direction: "left", top: 190, delay: 15, duration: 180 }), _jsx(Birds, { delay: 5 }), _jsx(Mountains, {}), _jsx("div", { className: "land", children: _jsxs("div", { className: "road", children: [_jsx("div", { className: "road_line" }), _jsx(Pickup, { delay: 12 }), _jsx(SportCar, { delay: 15 })] }) })] }));
+export default Animation;

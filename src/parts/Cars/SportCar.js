@@ -1,11 +1,6 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
-const framer_motion_1 = require("framer-motion");
-const Fogs_1 = __importDefault(require("./components/Fogs"));
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { motion } from "framer-motion";
+import Fogs from "./components/Fogs";
 const sportcarVariants = {
     wheelVariants: {
         initial: {
@@ -32,7 +27,7 @@ const sportcarVariants = {
     }
 };
 const SportCar = ({ delay }) => {
-    return ((0, jsx_runtime_1.jsx)(framer_motion_1.motion.div, Object.assign({ variants: sportcarVariants.bodyVariants, initial: "initial", animate: "animate", className: "sportcar", transition: {
+    return (_jsx(motion.div, { variants: sportcarVariants.bodyVariants, initial: "initial", animate: "animate", className: "sportcar", transition: {
             duration: 15,
             delay,
             ease: "linear",
@@ -40,6 +35,6 @@ const SportCar = ({ delay }) => {
                 delay: delay + 2,
                 duration: 5,
             }
-        } }, { children: (0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "sportcar_base" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "sportcar_cabin" }), (0, jsx_runtime_1.jsxs)(framer_motion_1.motion.div, Object.assign({ variants: sportcarVariants.wheelVariants, initial: "initial", animate: "animate", className: "wheel wheel_forward" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_1" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_2" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_3" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_4" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_5" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_6" })] })), (0, jsx_runtime_1.jsxs)(framer_motion_1.motion.div, Object.assign({ variants: sportcarVariants.wheelVariants, initial: "initial", animate: "animate", className: "wheel wheel_backward" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_1" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_2" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_3" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_4" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_5" }), (0, jsx_runtime_1.jsx)("div", { className: "wheel_rect wheel_rect_6" })] })), (0, jsx_runtime_1.jsx)("div", { className: "pipe" }), (0, jsx_runtime_1.jsx)(Fogs_1.default, { zIndex: 4 })] })) })));
+        }, children: _jsxs("div", { className: "sportcar_base", children: [_jsx("div", { className: "sportcar_cabin" }), _jsxs(motion.div, { variants: sportcarVariants.wheelVariants, initial: "initial", animate: "animate", className: "wheel wheel_forward", children: [_jsx("div", { className: "wheel_rect wheel_rect_1" }), _jsx("div", { className: "wheel_rect wheel_rect_2" }), _jsx("div", { className: "wheel_rect wheel_rect_3" }), _jsx("div", { className: "wheel_rect wheel_rect_4" }), _jsx("div", { className: "wheel_rect wheel_rect_5" }), _jsx("div", { className: "wheel_rect wheel_rect_6" })] }), _jsxs(motion.div, { variants: sportcarVariants.wheelVariants, initial: "initial", animate: "animate", className: "wheel wheel_backward", children: [_jsx("div", { className: "wheel_rect wheel_rect_1" }), _jsx("div", { className: "wheel_rect wheel_rect_2" }), _jsx("div", { className: "wheel_rect wheel_rect_3" }), _jsx("div", { className: "wheel_rect wheel_rect_4" }), _jsx("div", { className: "wheel_rect wheel_rect_5" }), _jsx("div", { className: "wheel_rect wheel_rect_6" })] }), _jsx("div", { className: "pipe" }), _jsx(Fogs, { zIndex: 4 })] }) }));
 };
-exports.default = SportCar;
+export default SportCar;

@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.flockDetails = void 0;
-const jsx_runtime_1 = require("react/jsx-runtime");
-const framer_motion_1 = require("framer-motion");
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { motion } from "framer-motion";
 const birdVariants = {
     bodyVariants: {
         initial: {
@@ -21,7 +18,7 @@ const birdVariants = {
         }
     }
 };
-exports.flockDetails = [
+export const flockDetails = [
     {
         top: 100,
         delay: 0.25
@@ -35,14 +32,14 @@ exports.flockDetails = [
         delay: 0.71
     }
 ];
-const Bird = ({ top, delay }) => ((0, jsx_runtime_1.jsxs)(framer_motion_1.motion.div, Object.assign({ variants: birdVariants.bodyVariants, initial: "initial", animate: "animate", transition: {
+const Bird = ({ top, delay }) => (_jsxs(motion.div, { variants: birdVariants.bodyVariants, initial: "initial", animate: "animate", transition: {
         delay,
         duration: 10,
         ease: "linear",
     }, className: "bird", style: {
         top: top + "px"
-    } }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "bird_head" }), (0, jsx_runtime_1.jsx)("div", { className: "bird_body" }), (0, jsx_runtime_1.jsx)("div", { className: "bird_tail" }), (0, jsx_runtime_1.jsxs)(framer_motion_1.motion.div, Object.assign({ variants: birdVariants.wingVariants, initial: "initial", animate: "animate", transition: {
+    }, children: [_jsx("div", { className: "bird_head" }), _jsx("div", { className: "bird_body" }), _jsx("div", { className: "bird_tail" }), _jsxs(motion.div, { variants: birdVariants.wingVariants, initial: "initial", animate: "animate", transition: {
                 duration: Math.random() / 2 + 0.5,
                 repeat: Infinity,
-            }, className: "bird_wing bird_wing_1" }, { children: [(0, jsx_runtime_1.jsx)("div", { className: "bird_wing_zigzag bird_wing_zigzag_1" }), (0, jsx_runtime_1.jsx)("div", { className: "bird_wing_zigzag bird_wing_zigzag_2" }), (0, jsx_runtime_1.jsx)("div", { className: "bird_wing_zigzag bird_wing_zigzag_3" })] }))] })));
-exports.default = ({ delay }) => (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [exports.flockDetails.map(({ delay: relationalDelay, top }, index) => (0, jsx_runtime_1.jsx)(Bird, { delay: delay + relationalDelay, top: top }, index)), " "] });
+            }, className: "bird_wing bird_wing_1", children: [_jsx("div", { className: "bird_wing_zigzag bird_wing_zigzag_1" }), _jsx("div", { className: "bird_wing_zigzag bird_wing_zigzag_2" }), _jsx("div", { className: "bird_wing_zigzag bird_wing_zigzag_3" })] })] }));
+export default ({ delay }) => _jsxs(_Fragment, { children: [flockDetails.map(({ delay: relationalDelay, top }, index) => _jsx(Bird, { delay: delay + relationalDelay, top: top }, index)), " "] });

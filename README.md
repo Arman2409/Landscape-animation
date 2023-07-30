@@ -11,3 +11,5 @@ To build the project
 ```javascript
   npm run build
 ```
+
+Note: This animation is not screen responsive 

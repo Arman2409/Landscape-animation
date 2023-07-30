@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
-const framer_motion_1 = require("framer-motion");
+import { jsx as _jsx } from "react/jsx-runtime";
+import { motion } from "framer-motion";
 const sunVariants = {
     initial: {
         bottom: "0px",
@@ -31,18 +29,18 @@ const Sun = ({ duration }) => {
                     transitionEnd: { display: "none" }
                 }
             };
-            glimmers.push((0, jsx_runtime_1.jsx)(framer_motion_1.motion.div, { className: "glimmer", variants: itemVariants, initial: "initial", animate: "animate" }));
+            glimmers.push(_jsx(motion.div, { className: "glimmer", variants: itemVariants, initial: "initial", animate: "animate" }));
         }
         return glimmers;
     };
     const glimmers = getGlimmers(10);
-    return ((0, jsx_runtime_1.jsx)(framer_motion_1.motion.div, Object.assign({ className: "sun", initial: "initial", animate: "animate", variants: sunVariants, transition: {
+    return (_jsx(motion.div, { className: "sun", initial: "initial", animate: "animate", variants: sunVariants, transition: {
             duration,
             delay: 1,
             boxShadow: {
                 repeat: Infinity,
                 duration: 10
             }
-        } }, { children: glimmers })));
+        }, children: glimmers }));
 };
-exports.default = Sun;
+export default Sun;
