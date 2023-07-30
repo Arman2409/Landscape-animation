@@ -1,0 +1,148 @@
+$truckColor: brown;
+$wheelColor: grey;
+$wheelColor2: orangered;
+
+.pickup {
+   width: 200px;
+   height: 140px;
+   left: 400px;
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &_base {
+      width: 100px;
+      height: 35px;
+      background-color: $truckColor;
+      position: relative;
+      border-radius: 5px 12px 2px 2px;
+      z-index: 5;
+
+      .pickup_cabin {
+         height: 30px;
+         width: 20px;
+         position: absolute;
+         top: -19px;
+         right: 20px;
+         border-top-right-radius: 7px;
+         border-left: 20px solid $truckColor;
+         border-bottom: 0px solid transparent;
+         border-right: 21px solid $truckColor;
+         clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+
+         &::before {
+            content: "";
+            width: 8px;
+            height: 15px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 3px;
+            clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
+            display: block;
+            background-color: blue;
+         }
+
+         &::after {
+            content: "";
+            width: 12px;
+            height: 15px;
+            position: absolute;
+            top: 4px;
+            left: -12px;
+            border-radius: 3px;
+            display: block;
+            background-color: blue;
+         }
+      }
+
+      .wheel {
+         width: 25px;
+         height: 25px;
+         position: absolute;
+         background-color: $wheelColor;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         rotate: (15deg);
+         border: 1px solid $wheelColor2;
+         bottom: -12.5px;
+
+         &::after {
+            content: "";
+            width: 3px;
+            z-index: 2;
+            height: 3px;
+            display: block;
+            background-color: $wheelColor2;
+            border-radius: 50%;
+         }
+
+         &_forward {
+            right: 5px;
+         }
+
+         &_backward {
+            left: 5px;
+         }
+
+         &_rect {
+            width: 0.5px;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+               content: "";
+               display: block;
+               position: absolute;
+               width: 1px;
+               height: 50%;
+               background-color: grey;
+            }
+
+            &_2 {
+               transform: rotate(60deg);
+            }
+
+            &_3 {
+               transform: rotate(120deg);
+            }
+
+            &_4 {
+               transform: rotate(180deg);
+            }
+
+            &_5 {
+               transform: rotate(240deg);
+            }
+
+            &_6 {
+               transform: rotate(300deg);
+            }
+         }
+      }
+
+      .pipe {
+        width: 5px;
+        height: 10px;
+        background-color: brown;
+        position: absolute;
+        bottom: 0;
+        left: -5px;
+      }
+
+      .fogs {
+         width: 40px;
+         height: 45px;
+         position: absolute;
+         top: 5px;
+         left: -45px;
+      }
+   }
+}

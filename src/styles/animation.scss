@@ -1,0 +1,53 @@
+.main_cont {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden !important;
+    position: relative;
+
+    .land {
+        width: 130%;
+        height: 40vh;
+        z-index: 5;
+        align-self: flex-end;
+        background-color: orangered;
+        display: flex;
+        overflow: visible;
+        position: relative;
+
+        .mountains_closing {
+            width: 850px;
+            height: 142px;
+            background-color: orangered;
+            position: absolute;
+            left: 650px;
+            top: 0px;
+            z-index: 4;
+        }
+
+        .road {
+            width: calc(100% + 50px); 
+            width: 5000px !important;
+            height: 120px;
+            position: relative;
+            left: -10px;
+            margin-top: 55px;
+            align-self: center;
+            background-color: black;
+            transform: rotateX(60deg) rotate(3deg);
+            display: flex;
+            border: 3px solid grey;
+            border-left: 0;
+            border-right: 0;
+
+            .road_line {
+                width: 100%;
+                align-self: center;
+                border-top: 4px dashed white;
+            }
+        }
+    }
+}

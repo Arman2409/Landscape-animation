@@ -1,0 +1,137 @@
+$carColor: rgb(229, 229, 29);
+$wheelColor: rgb(242, 134, 134);
+$wheelColor2: rgb(0, 38, 255);
+
+.sportcar {
+   width: 200px;
+   height: 140px;
+   left: 200px;
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &_base {
+      width: 55px;
+      height: 20px;
+      background-color: $carColor;
+      position: relative;
+      border-radius: 5px 100px 2px 2px;
+      z-index: 4;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 5px;
+        border-radius: 50% 50% 0 0;
+        border: 3px solid $carColor;
+        background-color: $carColor;
+        position: absolute;
+        top: -5px;
+      }
+
+      .sportcar_cabin {
+         height: 30px;
+         width: 25px;
+         position: absolute;
+         top: -10px;
+         right: 20px;
+         background-color: $carColor;
+         border-radius: 50% 50% 0 0;
+
+         &::before {
+            content: "";
+            width: 14px;
+            height: 8px;
+            position: absolute;
+            top: 3px;
+            left: 7px;
+            border-radius: 50% 50% 0 0;
+            border-radius: 50px 100px 2px 2px;
+            display: block;
+            background-color: blue;
+         }
+      }
+
+      .wheel {
+         width: 15px;
+         height: 15px;
+         position: absolute;
+         background-color: $wheelColor;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         rotate: (15deg);
+         border: 1px solid $wheelColor2;
+         bottom: -7.5px;
+
+         &::after {
+            content: "";
+            width: 3px;
+            z-index: 2;
+            height: 3px;
+            display: block;
+            background-color: $wheelColor2;
+            border-radius: 50%;
+         }
+
+         &_forward {
+            right: 5px;
+         }
+
+         &_backward {
+            left: 5px;
+         }
+
+         &_rect {
+            width: 0.5px;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+               content: "";
+               display: block;
+               position: absolute;
+               width: 1px;
+               height: 50%;
+               background-color: grey;
+            }
+
+            &_2 {
+               transform: rotate(60deg);
+            }
+
+            &_3 {
+               transform: rotate(120deg);
+            }
+
+            &_4 {
+               transform: rotate(180deg);
+            }
+
+            &_5 {
+               transform: rotate(240deg);
+            }
+
+            &_6 {
+               transform: rotate(300deg);
+            }
+         }
+      }
+
+      .pipe {
+        width: 4px;
+        height: 8px;
+        background-color: wheat;
+        position: absolute;
+        bottom: 0;
+        left: -4px;
+      }
+   }
+}

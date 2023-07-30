@@ -1,0 +1,76 @@
+.bird {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    z-index: 4;
+
+    &_head {
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 0;
+        top: 39px;
+        transform: rotate(10deg);
+        border-left: 10px solid black;
+        border-bottom: 2px solid transparent;
+        border-top: 2px solid transparent;
+    }
+
+    &_body {
+        width: 20px;
+        height: 5px;
+        background-color: black;
+        border-radius: 1800px;
+        position: absolute;
+        right: 8px;
+        top: 38px;
+    }
+
+    &_tail {
+        height: 0;
+        width: 0;
+        border-left: 20px solid black;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        position: absolute;
+        right: 15px;
+        top: 35px;
+    }
+
+    &_wing {
+       border-bottom-right-radius: 30px;
+       right: 15px;
+       top: 40px;
+       height: 0px;
+       width: 0px;
+       border-right: 5px solid black;
+       border-left: 5px solid black;
+       border-top: 10px solid black;
+       border-bottom: 10px solid black;
+       position: absolute;
+       rotate: (15deg);
+       transform-origin: 0% 0%;
+       &_zigzag {
+          position: absolute;
+          left: -7px;
+          height: 0px;
+          width: 0px;
+          border-left: 3px solid transparent;
+          border-top: 3px solid black;
+          border-bottom: 3px solid black;
+       }
+
+       &_zigzag_1 {
+         bottom: -10px;
+       }
+
+        &_zigzag_2 {
+            bottom: -4px;
+        }
+
+        &_zigzag_3 {
+            bottom: 4px;
+        }
+    }
+}

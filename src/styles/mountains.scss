@@ -1,0 +1,98 @@
+.mountain {
+    position: absolute;
+    width: 141px;
+    height:121px;
+    border-radius:700px 0px 5000px 0px;
+    transform:rotate(45deg);
+    background-color: rgb(68, 4, 4);
+    z-index: 4;
+    top: -100px;
+}
+
+.mountain_1 {
+    left: 400px;
+    top: 53vh;
+    width: 121px;
+
+    &_rock_1 {
+        width: 60px;
+        height: 8px;
+        position: relative;
+        transform: rotate(5deg);
+        top: 10px;
+        left: 30px;
+        border-radius: 50%;
+        background-color: rgb(158, 84, 44);
+    }
+
+    &_rock_2 {
+        width: 80px;
+        height: 11px;
+        position: relative;
+        transform: rotate(95deg);
+        top: 50px;
+        left: -20px;
+        border-radius: 50%;
+        background-color: rgb(158, 84, 44);
+    }
+}
+
+.mountain_2 {
+    left: 525px;
+    top: 53vh;
+    height: 111px;
+
+    &_rock_1 {
+        width: 100px;
+        height: 10px;
+        position: relative;
+        transform: rotate(90deg);
+        top: 75px;
+        right: 30px;
+        border-radius: 50%;
+        background-color: rgb(158, 84, 44);
+    }
+
+    &_rock_2 {
+        width: 115px;
+        height: 12px;
+        position: relative;
+        transform: rotate(0deg);
+        top: 0px;
+        left: 40px;
+        border-radius: 50%;
+        background-color: rgb(158, 84, 44);
+    }
+}
+
+.mountain_3 {
+    left: 650px;
+    top: 50vh;
+    width: 300px;
+    height: 300px;
+    transform:rotate(45deg);
+    border-radius: 1800px 0px 5000px 0px;
+    border-bottom: 0px solid rgb(57, 6, 6);
+
+    &_rock_1 {
+        width: 120px;
+        height: 14px;
+        position: relative;
+        transform: rotate(5deg);
+        top: 50px;
+        left: 70px;
+        border-radius: 50%;
+        background-color: rgb(158, 84, 44);
+    }
+
+    &_rock_2 {
+        width: 180px;
+        height: 11px;
+        position: relative;
+        transform: rotate(90deg);
+        top: 120px;
+        left: -60px;
+        border-radius: 50%;
+        background-color: rgb(158, 84, 44);
+    }
+}

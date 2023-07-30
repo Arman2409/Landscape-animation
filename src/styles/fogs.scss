@@ -1,0 +1,30 @@
+.fogs {
+    width: 40px;
+    height: 45px;
+    position: absolute;
+    top: 5px;
+    left: -45px;
+    
+    .fog {
+        border-radius: 25px 30px 15px 40px;
+        width: 15px;
+        height: 15px;
+        background-color: grey;
+        position: absolute;
+    
+        &_1 {
+           left: 0;
+           top: 0;
+        }
+    
+        &_2 {
+           left: 5px;
+           top: 25px;
+        }
+    
+        &_3 {
+           left: 20px;
+           top: 15px;
+        }
+     }
+ }
